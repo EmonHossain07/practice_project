@@ -1,0 +1,115 @@
+/* Navbar */
+.navbar {
+    background-color: #acc7e2; /* Set navbar background color */
+}
+.navbar-brand .name {
+    font-size: 1.25rem; /* Responsive font size */
+}
+
+/* Media Queries */
+@media (max-width: 576px) {
+    .navbar-brand img {
+        height: 50px; /* Scale down the logo size for small screens */
+    }
+    .navbar-brand .name {
+        font-size: 1rem; /* Reduce text size for better spacing */
+    }
+    .offcanvas-body .nav-link {
+        font-size: 0.9rem; /* Adjust menu text size */
+    }
+    .offcanvas-header h5 {
+        font-size: 1.2rem; /* Adjust header size in offcanvas */
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-brand img {
+        height: 60px; /* Scale down logo size */
+    }
+    .navbar-brand .name {
+        font-size: 1.1rem; /* Slightly reduce text size */
+    }
+    .offcanvas-body .nav-link {
+        font-size: 1rem; /* Adjust menu text size */
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar-brand img {
+        height: 70px; /* Scale logo size down for better spacing */
+    }
+    .navbar-brand .name {
+        font-size: 1.25rem; /* Keep text size at 1.25rem */
+    }
+    .offcanvas-body .nav-link {
+        font-size: 1.1rem; /* Adjust menu text size */
+    }
+}
+
+
+
+.img{
+    border-radius: 50px;
+}
+.name{
+    color: rgb(3, 3, 67);
+}
+.col{
+    border-radius: 20px;
+}
+p{
+    font-size: 20px;
+}
+
+.b_div{
+    border-radius: 30px;
+}
+
+.head{
+    border-radius: 30px;
+}
+#notice{
+    text-align: justify;
+}
+.b_div {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .b_div:hover {
+    transform: scale(1.05); /* Slightly enlarges the div */
+    background-color: #0056b3; /* Darker shade of primary color */
+  }
+  
+        /* Navbar Link Hover Effects */
+        .navbar-nav .nav-link {
+            color: #000; /* Default color */
+            position: relative; /* Required for the underline effect */
+            transition: color 0.2s ease-in-out; /* Smooth color transition */
+        }
+        .navbar-nav .nav-link:hover {
+            background-color: #4fbcf3;
+            border-radius: 10px;
+            color: #000000; /* Change color on hover */
+        }
+        .navbar-nav .nav-link:hover::after {
+            content: ""; /* Create a pseudo-element for the underline */
+            position: absolute;
+            left: 0;
+            bottom: -5px; /* Position it slightly below the text */
+            width: 100%;
+            height: 2px;
+            background-color: #0d6efd; /* Color of the underline */
+            transition: width 0.3s ease-in-out; /* Smooth underline transition */
+            width: 100%; /* Show the underline fully on hover */
+        }
+        /* Initial state of underline (not visible) */
+        .navbar-nav .nav-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0;
+            height: 2px;
+            background-color: transparent;
+            transition: width 0.3s ease-in-out;
+        }
